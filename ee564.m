@@ -1,12 +1,13 @@
-opendocument('EE564.fem');
-mi_saveas('temp.fem');
-mi_seteditmode('group');
 ilkhizx=0;
 ilkhizy=0;
 eylemsizlik=0.000029;
 rothiz=0;
 posx= 2.5;
 posy= 7.5;
+openfemm;
+opendocument('EE564.fem');
+mi_saveas('temp.fem');
+mi_seteditmode('group');
 t=0;
 for n=0:11 
 	mi_analyze();
@@ -27,5 +28,7 @@ for n=0:11
 	ilkhizy = ilkhizy+hizdegy;
 	t=t+0.03;
 end
-plot(t,rothiz)
-closefemm
+
+closefemm;
+
+plot(t,rothiz);
